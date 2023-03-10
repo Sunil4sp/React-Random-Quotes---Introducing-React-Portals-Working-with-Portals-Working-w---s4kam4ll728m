@@ -13,7 +13,7 @@ var colors = [
   '#472E32',
   '#BDBB99',
   '#77B1A9',
-  '#73A857'
+  '#73A857',
 ];
 
 const App = () => {
@@ -33,12 +33,13 @@ const App = () => {
     .then(data=>{
       setContent(data.content);
       setAuthor(data.author);
-      /* changeDivColor(color); */
+      changeDivColor(color);
     })
   }
-  const changeDivColor = () =>{
-    setColor(colors[color]);
+  const changeDivColor = (color) =>{
+    
     document.body.style.backgroundColor = colors[color];
+    setColor(color => color + 1);
   }
 
     return (
