@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/App.css";
 
 var colors = [
@@ -21,11 +21,6 @@ const App = () => {
   const [content, setContent] = useState('');
   const [author, setAuthor] = useState('');
   const [color, setColor] = useState(0);
-
-  /* useEffect(() =>{
-    /* document.body.style.backgroundColor = color; 
-    changeDivColor(color);
-  },[color]); */
 
   const getQuote = () =>{
     fetch('https://api.quotable.io/random')

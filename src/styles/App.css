@@ -42,7 +42,7 @@ body {
     clear: both;
     font-weight: 500;
     font-size: 1.75em;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .quote-text i {
@@ -57,7 +57,7 @@ body {
     padding-top: 20px;
     font-size: 1em;
     text-align: right;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .buttons {
