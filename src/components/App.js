@@ -20,12 +20,12 @@ const App = () => {
 
   const [content, setContent] = useState('');
   const [author, setAuthor] = useState('');
-  const [color, setColor] = useState([colors]);
+  const [color, setColor] = useState(0);
 
-  useEffect(() =>{
-    /* document.body.style.backgroundColor = color; */
+  /* useEffect(() =>{
+    /* document.body.style.backgroundColor = color; 
     changeDivColor(color);
-  },[color])
+  },[color]); */
 
   const getQuote = () =>{
     fetch('https://api.quotable.io/random')
@@ -36,14 +36,14 @@ const App = () => {
       /* changeDivColor(color); */
     })
   }
-  const changeDivColor = color =>{
-    document.body.style.backgroundColor = color;
-    setColor(color);
+  const changeDivColor = () =>{
+    setColor(colors[color]);
+    document.body.style.backgroundColor = colors[color];
   }
 
     return (
       <div id="main">
-        <div id="wrapper" style={{backgroundColor: color}}>
+        <div id="wrapper">
           <div className="quote-text">{content}</div>
           <div className="quote-author">{author}</div>
           <button id="new-quote" onClick={getQuote}>Fetch Quote</button>
