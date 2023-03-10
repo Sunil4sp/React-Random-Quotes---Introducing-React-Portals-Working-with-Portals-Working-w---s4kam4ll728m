@@ -18,7 +18,7 @@ var colors = [
 
 const App = () => {
 
-  const [content, setContent] = useState('');
+  const [quote, setContent] = useState('');
   const [author, setAuthor] = useState('');
   const [color, setColor] = useState(0);
 
@@ -26,9 +26,10 @@ const App = () => {
     fetch('https://api.quotable.io/random')
     .then(res=> res.json())
     .then(data=>{
+      let tempColor = colors[Math.floor(Math.random()*colors.length)];
       setContent(data.content);
       setAuthor(data.author);
-      changeDivColor(color);
+      changeDivColor(tempColor);
     })
   }
   const changeDivColor = (color) =>{
