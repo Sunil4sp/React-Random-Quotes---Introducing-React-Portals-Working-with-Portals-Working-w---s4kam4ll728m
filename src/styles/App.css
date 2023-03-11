@@ -27,7 +27,6 @@ body {
 #quote-box {
     border-radius: 3px;
     position: relative;
-    /* margin:8% auto auto auto; */
     width: 450px;
     padding: 40px 50px;
     display: table;
@@ -42,7 +41,6 @@ body {
     clear: both;
     font-weight: 500;
     font-size: 1.75em;
-    color: #fff;
 }
 
 .quote-text i {
@@ -57,7 +55,6 @@ body {
     padding-top: 20px;
     font-size: 1em;
     text-align: right;
-    color: #fff;
 }
 
 .buttons {

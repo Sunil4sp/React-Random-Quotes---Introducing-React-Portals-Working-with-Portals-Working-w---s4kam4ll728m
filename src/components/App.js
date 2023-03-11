@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 
 var colors = [
@@ -13,11 +13,10 @@ var colors = [
   '#472E32',
   '#BDBB99',
   '#77B1A9',
-  '#73A857',
+  '#73A857'
 ];
 
 const App = () => {
-
   const [quote, setQuote] = useState(null);
 
   const getQuote = () => {
